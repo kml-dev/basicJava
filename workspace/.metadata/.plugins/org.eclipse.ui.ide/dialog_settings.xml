@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+			<item value="C:\Users\PC05\Desktop\basicproject"/>
+			<item value="C:\Users\PC05\Desktop\basicproject3"/>
+			<item value="C:\Users\PC05\Desktop\햄벅\basicproject"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\PC05\Desktop\7조_플젝_기능수정완료.zip"/>
+			<item value="C:\Users\PC05\Desktop\7조_초급프로젝트_끝.zip"/>
+			<item value=""/>
+			<item value="C:\Users\PC05\Desktop\프로젝트.zip"/>
+			<item value="C:\Users\PC05\Desktop\bug_2.zip"/>
+		</list>
+	</section>
+</section>

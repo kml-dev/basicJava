@@ -1,0 +1,179 @@
+package z_exam;
+
+import java.util.Scanner;
+
+public class Exercise_4 {
+	public static void main(String[] args){
+		// [4-2] 1~20까지 2,3의 배수가 아닌 수의 합
+//		int result = 0;                        // 결괏값을 받을 변수 선언 및 초기화
+//		for (int i = 1; i <= 20; i++){         // 1~20까지의 수를 표현할 변수 i, 20과 같아질 때까지 증가
+//			if(i % 2 != 0 && i % 3 != 0){	   // i가 2로 나눈 나머지 값이 0이 아닌경우와 3으로 나눈 나머지 값이 0이 아닌경우 &결합 
+//				result += i;				   // 조건을 통과한 i만 변수에 누적
+//			}
+//		}
+//		System.out.println(result);
+		
+		// [4-3]for문 while문으로 변경, 구구단 출력.
+//		int dan = 2;												// 단을 표현할 변수 dan선언 및 초기화 (2단부터 시작)
+//		int gob = 0;												// 1~9까지 곱하기 위한 gob선언 및 초기화
+//		while(dan <= 9){											// 9단이 넘어가면 반복이 끝나는 while문
+//			gob++;													// 1~9까지 곱하기 위해 gob연산후 1씩 증가
+//			System.out.println(dan + "*" + gob + "=" + dan*gob);	// 단 * 곱 = 결과를 출력
+//			if(gob==9){												// 만약 gob이 9가 되면 실행될 조건문
+//				gob = 0;											// gob이 9일때 다시 0으로 초기화
+//				dan++;												// 9까지 곱하고 dan이 1증가
+//			}	
+//		}															// dan이 9가 되어 while문 종료 
+		
+		// [4-4] 두 개의 주사위를 던졌을 때 , 눈의 합이 6이 되는 모든 경우의 수 출력.
+		// 1) 값 2개(최대6)
+		// 2) 2개의 값을 더해서 6이 되야함
+		// 3) 일단은 무한대 경우. but, 6 & 6까지 
+//		for(int i = 1; i <= 6; i++){ 								// 주사위1의 눈을 표현하기 위한 변수 i 선언, 눈은 6까지
+//			for(int j = 1; j <= 6; j++){							// 주사위2의 눈을  표현하기 위한 변수 j 선언, 눈은 6까지
+//				if(i+j==6){											// 주사위1+주사위2 눈의 합이 6일 경우 if문 실행
+//					System.out.println("주사위 1 : "+ i + " " + "주사위 2 : " + j ); // 경우의 수 출력
+//				}
+//			}
+//		}
+		// [4-5] 방정식 2x + 4y = 10의 모든 해를 구하시오. 0 <= x <= 10, 0 <= y <= 10.
+//		for(int x = 0; x <= 10; x++){								// x는 0~10까지의 수를 표현, x가 10이 될 때까지 반복
+//			for(int y = 0; y <= 10; y++){							// y는 0~10까지의 수를 표현 , y가 10이 될 때까지 반복
+//				if(2*x+4*y==10){									// 2*x + 4*y == 10인 경우 if문 실행
+//					System.out.print("x="+x+" ");					// x가 조건에 맞는 경우 출력
+//					System.out.println("y="+y);						// y가 조건에 맞는 경우 출력
+//				}
+//			}
+//		}
+		// [4-6] 사용자로부터 두개의 정수(시작,끝)를 입력받아 시작(포함)에서 끝(포함)까지의 곱을 출력하는 프로그램.
+//		Scanner sc = new Scanner(System.in);						//수를 입력 받기위한 클래스 Scanner 호출 
+//		
+//		System.out.println("첫번째 숫자 입력 : ");						// 첫번째 숫자 입력 받음
+//		int num1 = sc.nextInt();									// ..
+//		System.out.println("두번째 숫자 입력 : ");						// 두번째 숫자 입력 받음
+//		int num2 = sc.nextInt();									// .. 
+//		long result = 1L;											// 두 정수의 범위를 모르기 때문에 정수형 중 가장 큰 long 선언
+//		while(num1 <= num2){										// 첫번째 숫자가 두번째 숫자보다 작거나 같을 때까지 반복
+//			result *= num1++;										// 첫번째 숫자가 1씩 증가하면서 곱셈을 수행하면서 result에 누적										
+//		}
+//		System.out.println(result);									// 결괏값 출력
+		// [4-7] 1 + (1+2) + (1+2+3) ... (1+2+3...+10)의 결과
+//		int result1 = 0;											// 중간 계산 값을 저장하기 위한 변수 result1
+//		int result2 = 0;											// 결괏값을 저장하기 위한 변수 result2
+//				
+//		for(int i = 1; i <= 10; i++){								// 1~10까지 더하기 위한 i를 이용한 for문
+//			result1 += i;											// i가 증가에 따라 그 값을 저장
+//			int sum = 0;											// while문에서 result1값과 비교하기 위한 변수 sum
+//			int j = 0;												// 수식을 표현하기 위한 변수 j
+//			if(i!=1){												// i가 1일때는 "("를 프린트 하지 않는 조건
+//				System.out.print("(");								// i가 1이 아닐때만 "("를 프린트함
+//			}
+//			while(sum < result1){									// sum이 result1값보다 작을 때 수행하는 while문
+//				j++;												// j는 1에서 부터 시작이기 때문에 먼저 증가시킴
+//				sum += j;											// result1 값과 비교하기 위해 누적
+//				System.out.print(j);								// 수식에 들어갈 j값 출력
+//				
+//			}
+//			switch(j){												// j값으로 스위치 만듦
+//				case 1:												
+//					System.out.print("+");							// j가 1일 때 + 출력
+//					break;
+//				case 10:
+//					System.out.print(")"+"=");						// j가 10일 때 ")"와 "=" 출력
+//					break;
+//				default:											// 다른 모든 경우 ")"와 "+" 출력			
+//					System.out.print(")"+"+");		
+//			}
+//			result2 += result1;										// 증가되는 값을 result2에 저장
+//		}
+//		System.out.println(result2);								//결괏값 출력
+		//[4-8] 1 + (-2) + 3 + (-4).... 몇까지 더해야 합이 100?
+		int pos = 0;												// 결괏값을 저장하기 위한 변수 result
+		int neg = 0; 												
+		int i = 0;													// 더하는 숫자를 표현하기 위한 변수 i 
+		int cnt = 0;
+		
+		while(pos+neg<=100){
+			i++;
+			if(i % 2 != 0){
+				pos += i;
+			}else{
+				neg += i;
+			}
+		}
+														
+		
+			System.out.println(cnt);								// 반복 횟수 출력
+		// [4-9] 사용자로 부터 입력 받은 값의 각 자리 수 합
+//		Scanner sc = new Scanner(System.in);						// 스캐너 호출
+//		System.out.println("숫자를 입력하세요: ");
+//		int input = sc.nextInt();									// 숫자를 입력 받기 위한 input 
+//		int input = 53263;
+//		int result = 0;												// 결과를 누적하기 위한 result 
+//		
+//		while(input != 0){											// input이 0이 아닌 동안만 수행되는 while문
+//			result += input%10;										// 10으로 나눈 나머지 값을 result에 누적
+//			input /= 10;											// input을 10으로 나눈값을 다시 input에 저장(int형이 몫만 저장 됨) 
+//		}
+//		System.out.println(result);									//결과 출력
+//		// [4-10] 피보나치 수열은 앞의 두 수를 더해서 다음수를 만들어감. 1,1로 시작하는 피보나치수열의 10번째 수.
+//		int num1 = 1;												// 첫번째 수를 표현할 변수 num1
+//		int num2 = 1;												// 두번째 수를 표현할 변수 num2
+//		
+//		for(int i = 1; i < 11; i++){								// 10번째 수이기 때문에 10번 반복하기 위한 for문
+//			int nextNum = 0;										// 다음 숫자를 담기위한 변수 nextNum
+//			nextNum += num1+num2;									// 첫번째수와 두번째수를 더해 다음 숫자를 구함
+//			num1 = num2;											// 두번째 수가 다음에 올 첫째수 이기 때문에 num1에 num2를 넣음 
+//			num2 = nextNum;											// 다음에 올 둘째수가 nextNum이기 때문에 num2에 다시 저장
+//		}
+//		System.out.println(num2);									// 반복이 끝난 후 마지막 숫자가 10번째 수
+		//[추가 문제] 사용자가 입력한 수가 펠린드롬인지 판단하라.
+//		Scanner sc = new Scanner(System.in);						// 스캐너 호출
+//		System.out.println("숫자를 입력하세요: ");						// 도움말
+//		int input = sc.nextInt();									// 사용자로부터 입력 받을 값 저장할 input변수
+//		int cnt = 0;												// 몇자리 수인지 확인하기 위한 변수 cnt
+//		
+//		while(input != 0){											// input이 0이 될 때까지 나누기 위한 while문
+//			input /= 10;											// input을 10으로 나눠서 자리수 확인
+//			cnt++;													// 몇번 나눴는지 카운트
+//		}
+//		System.out.println(cnt);
+//		
+		
+		//자릿수를 정해주지 않고 펠린드롬(54345)인지 아닌지 판단하는 프로그램을 개발한다.
+		//1) 조건1 : 홀수
+		//2) 조건2 : 5자리/2 = 2.5를 반올림하면 3. 3번째가 기준이됨
+		//3) 조건3 : 
+//		String varA = "54345";
+//		int lenA = varA.length();
+//		int pos = 0;	//기준점
+//		String temp1 = "";
+//		String temp2 = "";
+//		boolean result = true;
+//		
+//		System.out.println("lenA : " + lenA);
+//		
+//		if(lenA%2==0){	//2로나눈 나머지가 0이 아니면 홀수
+//			System.out.println("펠린드롬이 아님");
+//		}else{
+//			pos = Math.round((float)lenA / 2);
+//		}
+//		
+//		System.out.println("기준점 : " + pos);
+//		
+//		for(int i=0;i<pos-1;i++){
+//			temp1 = varA.substring(i, i+1);
+//			temp2 = varA.substring(lenA-(i+1), lenA-i);
+//			
+//			if(temp1.equals(temp2)){
+//				System.out.println(temp1 + ":" + temp2);
+//			}else{
+//				System.out.println("펠린드롬이 아님");
+//				result = false;
+//			}
+//		}
+//		
+//		System.out.println("결과 : " + result);
+		
+	}	
+}

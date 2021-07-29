@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;BService.java&apos; to &apos;burger_Main.BService.java&apos;&#x0D;&#x0A;- Original project: &apos;basicJava&apos;&#x0D;&#x0A;- Destination element: &apos;burger_Main.BService.java&apos;&#x0D;&#x0A;- Original element: &apos;z_exam.BService.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=basicproject/src&lt;burger_Main{BService.java" element1="/src&lt;z_exam{BService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1611744002644" units="1" version="1.0"/>
+</session>
